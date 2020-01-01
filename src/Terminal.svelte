@@ -1,5 +1,8 @@
 <script>
   export let title;
+
+  // box-shadow: 5px 5px 5px #c2c2c2;
+  // const colorMode = light ? "terminal_window-light" : "terminal_window-dark"
 </script>
 
 <div class="terminal_window">
@@ -14,12 +17,9 @@
 
 <style>
   .terminal_window {
-    background-color: #2b2b2b;
-    width: 600px;
-    height: 600px;
     overflow: hidden;
     border-radius: 6px;
-    box-shadow: 5px 5px 5px #c2c2c2;
+    height: 100%;
   }
 
   .terminal_header {
@@ -50,9 +50,11 @@
   }
 
   .terminal_content {
+    overflow: scroll;
     color: white;
     font-size: 18px;
     margin: 18px;
+    height: 100%;
   }
   
 </style>

@@ -1,5 +1,6 @@
 <script>
   import Contents from './Contents.svelte'
+  import Ab from './Ab.svelte'
 </script>
 <svelte:head>
   <meta charset="utf-8">
@@ -24,18 +25,29 @@
 </svelte:head>
 
 <main>
-  <div class="terminal_wrapper">
-    <Contents />
+  <Contents />
+  <div class="ab_window">
+    <Ab />
   </div>
 </main>
 
 <style>
+  :global(body) {
+    padding: 0;
+  }
+
 	main {
-		padding: 1em;
 		max-width: 240px;
-		margin: 0 auto;
     font-family: 'Cutive Mono', 'andale mono';
 	}
+
+  .ab_window {
+    position: absolute;
+    top: 170px;
+    left: 500px;
+    width: 1000px;
+    height: 1200px;
+  }
 
 	@media (min-width: 640px) {
 		main {
