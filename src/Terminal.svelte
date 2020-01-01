@@ -1,11 +1,12 @@
 <script>
   export let title;
+  export let light;
 
   // box-shadow: 5px 5px 5px #c2c2c2;
-  // const colorMode = light ? "terminal_window-light" : "terminal_window-dark"
+  const colorMode = light ? "light" : "dark"
 </script>
 
-<div class="terminal_window">
+<div class="{`terminal_window terminal_window-${colorMode}`}">
   <div class="terminal_header">
     <div class="terminal_button terminal_button-red"></div>
     <h1 class="terminal_title">{title}</h1>
@@ -20,6 +21,14 @@
     overflow: hidden;
     border-radius: 6px;
     height: 100%;
+  }
+
+  .terminal_window-dark {
+    background-color: #2b2b2b;
+  }
+
+  .terminal_window-light {
+    background-color: #fff;
   }
 
   .terminal_header {
@@ -54,7 +63,16 @@
     color: white;
     font-size: 18px;
     margin: 18px;
-    height: 100%;
+    margin-bottom: 30px;
+    height: 90%;
+  }
+
+  .terminal_window-dark .terminal_content {
+    color: #fff;
+  }
+
+  .terminal_window-light .terminal_content {
+    color: black;
   }
   
 </style>

@@ -1,6 +1,7 @@
 <script>
   import Terminal from "./Terminal.svelte"
   import Ab from './Ab.svelte'
+  import { windowOpen } from './store.js'
 
   let date = new Date()
   let image = 0
@@ -18,6 +19,10 @@
   function updateBackground(title) {
     image = imageMap[title]
   }
+
+  function updateWindowOpen(title) {
+    windowOpen.set(title)
+  }
 </script>
 
 <div class="{`main_background ${image}`}">
@@ -25,7 +30,7 @@
     <Terminal title="catalytic_quarterly #8 - january">
       <ul>
         <li><p>logged in: {date}</p></li> 
-        <li><span on:mouseenter={() => updateBackground("ab")} class="article article_ab">poor wheel - ab baars</span></li>
+        <li><span on:mouseenter={() => updateBackground("ab")} on:click={() => updateWindowOpen("ab")} class="article article_ab">poor wheel - ab baars</span></li>
         <li><span on:mouseenter={() => updateBackground("ben")} class="article article_ben">ben hall's mix</span></li>
         <li><span on:mouseenter={() => updateBackground("luke")} class="article article_luke">feedback & uplift: an interview with luke stewart - sam clapp</span></li>
         <li><span on:mouseenter={() => updateBackground("elisabeth")} class="article article_elisabeth">elisabeth harnik</span></li>
@@ -87,8 +92,9 @@
   }
 
   .terminal_wrapper {
-    background-color: black;
-    margin: 40px 70px;
+    position: absolute;
+    top: 40px;
+    left: 50px;
     width: 600px;
     height: 600px;
   }

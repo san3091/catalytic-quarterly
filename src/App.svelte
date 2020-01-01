@@ -1,7 +1,9 @@
 <script>
   import Contents from './Contents.svelte'
   import Ab from './Ab.svelte'
+  import { windowOpen } from './store.js'
 </script>
+
 <svelte:head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,9 +28,11 @@
 
 <main>
   <Contents />
-  <div class="ab_window">
-    <Ab />
-  </div>
+  {#if $windowOpen === "ab"}
+    <div class="ab_window">
+      <Ab />
+    </div>
+  {/if}
 </main>
 
 <style>
@@ -43,10 +47,10 @@
 
   .ab_window {
     position: absolute;
-    top: 170px;
-    left: 500px;
-    width: 1000px;
-    height: 1200px;
+    top: 110px;
+    left: 400px;
+    width: 900px;
+    height: 700px;
   }
 
 	@media (min-width: 640px) {
