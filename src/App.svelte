@@ -1,6 +1,7 @@
 <script>
   import Contents from './Contents.svelte'
   import Ab from './Ab.svelte'
+  import Ben from './Ben.svelte'
   import { windowOpen } from './store.js'
 </script>
 
@@ -32,6 +33,10 @@
     <div class="ab_window">
       <Ab />
     </div>
+  {:else if $windowOpen === "ben"}
+    <div class="ben_window">
+      <Ben />
+    </div>
   {/if}
 </main>
 
@@ -51,6 +56,14 @@
     left: 400px;
     width: 900px;
     height: 700px;
+  }
+
+  .ben_window {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    width: 600px;
+    height: 800px;
   }
 
 	@media (min-width: 640px) {
