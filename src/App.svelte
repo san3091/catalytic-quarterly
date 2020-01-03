@@ -2,6 +2,8 @@
   import Contents from './Contents.svelte'
   import Ab from './Ab.svelte'
   import Ben from './Ben.svelte'
+  import Luke from './Luke.svelte'
+  import Elisabeth from './Elisabeth.svelte'
   import { windowOpen } from './store.js'
 </script>
 
@@ -30,13 +32,21 @@
 <main>
   <Contents />
   {#if $windowOpen === "ab"}
-    <div class="ab_window">
+    <section class="ab_window">
       <Ab />
-    </div>
+    </section>
   {:else if $windowOpen === "ben"}
-    <div class="ben_window">
+    <section class="ben_window">
       <Ben />
-    </div>
+    </section>
+  {:else if $windowOpen === "luke"}
+    <section class="luke_window">
+      <Luke />
+    </section>
+  {:else if $windowOpen === "elisabeth"}
+    <section class="elisabeth_window">
+      <Elisabeth />
+    </section>
   {/if}
 </main>
 
@@ -64,6 +74,22 @@
     left: 300px;
     width: 600px;
     height: 800px;
+  }
+
+  .luke_window {
+    position: absolute;
+    top: 90px;
+    left: 200px;
+    width: 1000px;
+    height: 800px;
+  }
+
+  .elisabeth_window {
+    position: absolute;
+    top: 140px;
+    left: 160px;
+    width: 900px;
+    height: 700px;
   }
 
 	@media (min-width: 640px) {

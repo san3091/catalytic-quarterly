@@ -1,10 +1,10 @@
 <script>
   import Terminal from './Terminal.svelte'
-  import TimesTitle from './TimesTitle.svelte'
-  import TimesBody from './TimesBody.svelte'
+  import TimesTitle from './typography/TimesTitle.svelte'
+  import TimesBody from './typography/TimesBody.svelte'
 </script>
 
-<Terminal title="POOR WHEEL" light="true">
+<Terminal title="POOR WHEEL - ab baars" light="true">
   <article class="terminal_content">
     <TimesTitle>POOR WHEEL</TimesTitle>
     <TimesBody>
@@ -57,10 +57,10 @@
     background-color: white;
     color: #00c900;
     overflow: scroll;
-    font-size: 18px;
-    padding: 18px;
+    font-size: 20px;
+    padding: 0 18px;
     padding-bottom: 30px;
-    height: 100%;
+    height: 95%;
   }
 
 </style>

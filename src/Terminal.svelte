@@ -41,10 +41,11 @@
   }
 
   .terminal_button {
+    cursor: pointer;
     margin: 0;
     padding: 0;
-    height: 12px;
-    width: 12px;
+    height: 14px;
+    width: 14px;
     margin-left: 10px;
     border-radius: 10px;
   }
