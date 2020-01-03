@@ -4,9 +4,9 @@
   import TimesBody from './TimesBody.svelte'
 </script>
 
-<div class="terminal_content">
-  <Terminal title="POOR WHEEL" light="true">
-  <TimesTitle>POOR WHEEL</TimesTitle>
+<Terminal title="POOR WHEEL" light="true">
+  <article class="terminal_content">
+    <TimesTitle>POOR WHEEL</TimesTitle>
     <TimesBody>
       This month exactly 30 years ago I studied in Los Angeles with John Carter: clarinetist, composer and black belt aikido master. Very happy to return again to that city as part of my upcoming USA solo tour. Los Angeles the place where I experienced such an inspiring musical period in 1989 with John and also with his family.
     </TimesBody>
@@ -31,24 +31,36 @@
     <TimesBody>
       For more information: www.stichtingwig.com
     </TimesBody>
+  </article>
+</Terminal>
+<div class="ab_image">
+  <Terminal title="AbPhoto_CQ8.jpg">
+    <img alt="ab" src="./images/AbPhoto_CQ8.jpg" />
   </Terminal>
 </div>
-<img src="./images/AbPhoto_CQ8.jpg" />
 
 <style>
-  img {
+
+  .ab_image {
     position: absolute;
-    right: -50px;
+    left: -340px;
     bottom: -100px;;
-    height: 400px;
+    height: 500px;
+    width: 300px;
+  }
+
+  img {
+    width: 100%;
   }
 
   .terminal_content {
+    background-color: white;
+    color: #00c900;
     overflow: scroll;
     font-size: 18px;
-    margin: 18px;
-    margin-bottom: 30px;
-    height: 90%;
+    padding: 18px;
+    padding-bottom: 30px;
+    height: 100%;
   }
 
 </style>

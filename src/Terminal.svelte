@@ -1,18 +1,15 @@
 <script>
   import { windowOpen } from './store.js'
   export let title;
-  export let light;
   export let buttonDisabled;
 
-  // box-shadow: 5px 5px 5px #c2c2c2;
-  const colorMode = light ? "light" : "dark"
 
   function closeWindow() {
     windowOpen.set(null)
   }
 </script>
 
-<div class="{`terminal_window terminal_window-${colorMode}`}">
+<div class="terminal_window">
   <div class="terminal_header">
     <button class="terminal_button terminal_button-red" disabled={buttonDisabled} on:click={closeWindow}></button>
     <h1 class="terminal_title">{title}</h1>
@@ -25,14 +22,6 @@
     overflow: hidden;
     border-radius: 6px;
     height: 100%;
-  }
-
-  .terminal_window-dark {
-    background-color: #2b2b2b;
-  }
-
-  .terminal_window-light {
-    background-color: #fff;
   }
 
   .terminal_header {

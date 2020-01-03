@@ -71,12 +71,12 @@
   }
 
   .terminal_content {
-    overflow: scroll;
+    background-color: #2b2b2b;
     color: white;
     font-size: 18px;
-    margin: 18px;
-    margin-bottom: 30px;
-    height: 90%;
+    padding: 18px;
+    padding-bottom: 30px;
+    height: 100%;
   }
 
   .main_background {

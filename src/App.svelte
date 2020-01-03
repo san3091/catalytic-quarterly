@@ -53,7 +53,7 @@
   .ab_window {
     position: absolute;
     top: 110px;
-    left: 400px;
+    left: 420px;
     width: 900px;
     height: 700px;
   }
