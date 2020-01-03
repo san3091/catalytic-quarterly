@@ -17,9 +17,7 @@
     <button class="terminal_button terminal_button-red" disabled={buttonDisabled} on:click={closeWindow}></button>
     <h1 class="terminal_title">{title}</h1>
   </div>
-  <div class="terminal_content">
-    <slot></slot>
-  </div>
+  <slot></slot>
 </div>
 
 <style>

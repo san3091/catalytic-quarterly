@@ -28,27 +28,29 @@
 <div class="{`main_background ${image}`}">
   <div class="terminal_wrapper">
     <Terminal title="catalytic_quarterly #8 - january" buttonDisabled="true">
-      <ul>
-        <li><p>logged in: {date}</p></li> 
-        <li><span 
-              on:mouseenter={() => updateBackground("ab")} 
-              on:click={() => updateWindowOpen("ab")} class="article article_ab">poor wheel - ab baars</span></li>
-        <li><span 
-              on:mouseenter={() => updateBackground("ben")} 
-              on:click={() => updateWindowOpen("ben")} class="article article_ben">ben hall's mix</span></li>
-        <li><span 
-              on:mouseenter={() => updateBackground("luke")} 
-              on:click={() => updateWindowOpen("luke")} class="article article_luke">feedback &amp; uplift: an interview with luke stewart - sam clapp</span></li>
-        <li><span 
-              on:mouseenter={() => updateBackground("elisabeth")} 
-              on:click={() => updateWindowOpen("elisabeth")} class="article article_elisabeth">elisabeth harnik</span></li>
-        <li><span 
-              on:mouseenter={() => updateBackground("ig")} class="article article_ig">street chairs - ig henneman</span></li>
-        <li><span 
-              on:mouseenter={() => updateBackground("ken")} class="article article_ken">project notes for momentum five: stammer triptych, part two - ken vandermark</span></li>
-        <li><span 
-              on:mouseenter={() => updateBackground("mats")} class="article article_mats">WEAPON. JAZZ. SPONSORSHIP. - mats gustafsson</span></li>
-      </ul>
+      <div class="terminal_content">
+        <ul>
+          <li><p>logged in: {date}</p></li> 
+          <li><span 
+                on:mouseenter={() => updateBackground("ab")} 
+                on:click={() => updateWindowOpen("ab")} class="article article_ab">poor wheel - ab baars</span></li>
+          <li><span 
+                on:mouseenter={() => updateBackground("ben")} 
+                on:click={() => updateWindowOpen("ben")} class="article article_ben">ben hall's mix</span></li>
+          <li><span 
+                on:mouseenter={() => updateBackground("luke")} 
+                on:click={() => updateWindowOpen("luke")} class="article article_luke">feedback &amp; uplift: an interview with luke stewart - sam clapp</span></li>
+          <li><span 
+                on:mouseenter={() => updateBackground("elisabeth")} 
+                on:click={() => updateWindowOpen("elisabeth")} class="article article_elisabeth">elisabeth harnik</span></li>
+          <li><span 
+                on:mouseenter={() => updateBackground("ig")} class="article article_ig">street chairs - ig henneman</span></li>
+          <li><span 
+                on:mouseenter={() => updateBackground("ken")} class="article article_ken">project notes for momentum five: stammer triptych, part two - ken vandermark</span></li>
+          <li><span 
+                on:mouseenter={() => updateBackground("mats")} class="article article_mats">WEAPON. JAZZ. SPONSORSHIP. - mats gustafsson</span></li>
+        </ul>
+      <div>
     </Terminal>
   </div>
 </div>
@@ -66,6 +68,15 @@
 
   li:first-child {
     margin-bottom: 30px;
+  }
+
+  .terminal_content {
+    overflow: scroll;
+    color: white;
+    font-size: 18px;
+    margin: 18px;
+    margin-bottom: 30px;
+    height: 90%;
   }
 
   .main_background {
