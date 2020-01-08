@@ -6,13 +6,28 @@
   let date = new Date()
   let image = 0
 
+  const imageMap = {
+    ab: "ab",
+    ben: "ben",
+    luke: "luke",
+    elisabeth: "elisabeth",
+    ig: "ig",
+    ken: "ken",
+    mats: "mats",
+  }
+
   function updateBackground(title) {
-    image = $windowOpen
+    image = imageMap[title]
   }
 
   function updateWindowOpen(title) {
     windowOpen.set(title)
   }
+
+  function backgroundImageName(number) {
+    return `background_${number}-glitched.png`
+  }
+
 </script>
 
 <div class="{`main_background ${image}`}">
@@ -79,31 +94,31 @@
   }
 
   .ab {
-    background-image: url('/images/blue_broken.png');
+    background-image: url('/images/background_1-glitched.png');
   }
 
   .ben {
-    background-image: url('/images/grey_broken.png');
+    background-image: url('/images/background_2-glitched.png');
   }
 
   .luke {
-    background-image: url('/images/green_broken.png');
+    background-image: url('/images/background_3-glitched.png');
   }
 
   .ig {
-    background-image: url('/images/orange_broken.png');
+    background-image: url('/images/background_4-glitched.png');
   }
 
   .elisabeth {
-    background-image: url('/images/music_broken.png');
+    background-image: url('/images/background_6-glitched.png');
   }
 
   .ken {
-    background-image: url('/images/text_broken.png');
+    background-image: url('/images/background_7-glitched.png');
   }
 
   .mats {
-    background-image: url('/images/chair_broken.png');
+    background-image: url('/images/background_8-glitched.png');
   }
 
   .terminal_wrapper {

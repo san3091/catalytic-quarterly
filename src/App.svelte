@@ -99,9 +99,9 @@
 
   .ig_window {
     position: absolute;
-    top: 10px;
+    top: 70px;
     left: 300px;
-    width: 600px;
+    width: 800px;
     height: 800px;
   }
 
