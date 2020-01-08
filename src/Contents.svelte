@@ -6,18 +6,8 @@
   let date = new Date()
   let image = 0
 
-  const imageMap = {
-    ab: "ab",
-    ben: "ben",
-    luke: "luke",
-    elisabeth: "elisabeth",
-    ig: "ig",
-    ken: "ken",
-    mats: "mats",
-  }
-
   function updateBackground(title) {
-    image = imageMap[title]
+    image = $windowOpen
   }
 
   function updateWindowOpen(title) {
@@ -44,11 +34,14 @@
                 on:mouseenter={() => updateBackground("elisabeth")} 
                 on:click={() => updateWindowOpen("elisabeth")} class="article article_elisabeth">elisabeth harnik</span></li>
           <li><span 
-                on:mouseenter={() => updateBackground("ig")} class="article article_ig">street chairs - ig henneman</span></li>
+                on:mouseenter={() => updateBackground("ig")} 
+                on:click={() => updateWindowOpen("ig")} class="article article_ig">street chairs - ig henneman</span></li>
           <li><span 
-                on:mouseenter={() => updateBackground("ken")} class="article article_ken">project notes for momentum five: stammer triptych, part two - ken vandermark</span></li>
+                on:mouseenter={() => updateBackground("ken")} 
+                on:click={() => updateWindowOpen("ken")} class="article article_ken">project notes for momentum five: stammer triptych, part two - ken vandermark</span></li>
           <li><span 
-                on:mouseenter={() => updateBackground("mats")} class="article article_mats">WEAPON. JAZZ. SPONSORSHIP. - mats gustafsson</span></li>
+                on:mouseenter={() => updateBackground("mats")} 
+                on:click={() => updateWindowOpen("mats")} class="article article_mats">WEAPON. JAZZ. SPONSORSHIP. - mats gustafsson</span></li>
         </ul>
       <div>
     </Terminal>
@@ -86,7 +79,7 @@
   }
 
   .ab {
-    background-image: url('/images/blue_saturated.png');
+    background-image: url('/images/blue_broken.png');
   }
 
   .ben {
@@ -94,7 +87,7 @@
   }
 
   .luke {
-    background-image: url('/images/green_saturated.png');
+    background-image: url('/images/green_broken.png');
   }
 
   .ig {
