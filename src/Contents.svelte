@@ -22,10 +22,7 @@
 
   function updateWindowOpen(title) {
     windowOpen.set(title)
-  }
-
-  function backgroundImageName(number) {
-    return `background_${number}-glitched.png`
+    // $: console.log($windowOpen)
   }
 
 </script>

@@ -5,6 +5,7 @@
   import Luke from './Luke.svelte'
   import Elisabeth from './Elisabeth.svelte'
   import Ig from './Ig.svelte'
+  import Ken from './Ken.svelte'
   import { windowOpen } from './store.js'
 </script>
 
@@ -51,6 +52,10 @@
   {:else if $windowOpen === "ig"}
     <section class="ig_window">
       <Ig />
+    </section>
+  {:else if $windowOpen === "ken"}
+    <section class="ken_window">
+      <Ken />
     </section>
   {/if}
 </main>
@@ -103,6 +108,14 @@
     left: 300px;
     width: 800px;
     height: 800px;
+  }
+
+  .ken_window {
+    position: absolute;
+    top: 10px;
+    left: 240px;
+    width: 900px;
+    height: 750px;
   }
 
 	@media (min-width: 640px) {
